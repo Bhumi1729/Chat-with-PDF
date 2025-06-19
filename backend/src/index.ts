@@ -4,16 +4,16 @@ import Anthropic from '@anthropic-ai/sdk';
 import * as fs from 'fs';
 import pdf from 'pdf-parse';
 import cors from 'cors'; // Added CORS support
-import "dotenv";
-dotenv.config();
+import 'dotenv/config';
+
 const app = express();
 const upload = multer({ dest: 'uploads/' });
 
 app.use(cors());
-
+app.use(express.json()); // Middleware to parse JSON bodies
 
 const anthropic = new Anthropic({
-  apiKey: "",
+  apiKey: process.env.ANTHROPIC_API_KEY, // Ensure this is set in your environment variables
 });
 
 app.post('/upload', upload.single('pdf'), async (req: Request, res: Response): Promise<void> => {

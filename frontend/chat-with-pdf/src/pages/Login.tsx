@@ -39,9 +39,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-let analytics;
 if (typeof window !== 'undefined') {
-  analytics = getAnalytics(app);
+  getAnalytics(app);
 }
 
 const LoginPage: React.FC<LoginFormProps> = (props) => {
@@ -84,7 +83,7 @@ const LoginPage: React.FC<LoginFormProps> = (props) => {
     
     try {
       // Call Firebase authentication
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password);
       // If provided, call the onSubmit callback
       if (onSubmit) {
         onSubmit(email, password);
@@ -105,7 +104,7 @@ const LoginPage: React.FC<LoginFormProps> = (props) => {
     
     try {
       const provider = new GoogleAuthProvider();
-      const result = await signInWithPopup(auth, provider);
+      await signInWithPopup(auth, provider);
       // If provided, call the onGoogleLogin callback
       if (onGoogleLogin) {
         onGoogleLogin();

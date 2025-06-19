@@ -1,4 +1,3 @@
-import React from 'react';
 import { Github, Twitter, Linkedin, Mail, ArrowUp } from 'lucide-react';
 
 const AnimatedFooter = () => {

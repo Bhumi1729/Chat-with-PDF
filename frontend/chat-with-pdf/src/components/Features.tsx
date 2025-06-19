@@ -140,7 +140,7 @@ const FeaturesSection: React.FC<FeaturesSectionProps> = () => {
   const [animateTitle, setAnimateTitle] = useState(false);
   const titleRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition] = useState({ x: 0, y: 0 });
   
   // Track mouse position for parallax effect
 //   const handleMouseMove = (e: React.MouseEvent) => {

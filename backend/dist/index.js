@@ -55,7 +55,7 @@ const app = (0, express_1.default)();
 const upload = (0, multer_1.default)({ dest: 'uploads/' });
 app.use((0, cors_1.default)());
 const anthropic = new sdk_1.default({
-    apiKey: "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",
+    apiKey: "",
 });
 app.post('/upload', upload.single('pdf'), (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {

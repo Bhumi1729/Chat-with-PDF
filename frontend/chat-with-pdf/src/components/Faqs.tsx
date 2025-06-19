@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, FileText, MessageSquare, Search, HelpCircle } from 'lucide-react';
+import { ChevronDown, FileText, MessageSquare, Search, HelpCircle } from 'lucide-react';
 
 const GlassmorphicFAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
