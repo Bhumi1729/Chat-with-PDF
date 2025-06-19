@@ -93,7 +93,7 @@ const AiQuestionAnswer: React.FC = () => {
       setLoading(true);
       console.log('Sending request to backend...');
       
-      const response = await axios.post('http://localhost:3000/upload', formData, {
+      const response = await axios.post('https://chat-with-pdf-a7bl.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -185,7 +185,7 @@ const AiQuestionAnswer: React.FC = () => {
       {errorMessage && (
         <div className="bg-red-900/50 text-red-200 p-3 mx-6 mt-4 rounded-lg backdrop-blur-sm border border-red-700/50 max-w-6xl ">
           <p className="font-medium">Error: {errorMessage}</p>
-          <p className="text-sm mt-1">Please check that your backend server is running at http://localhost:3000</p>
+          <p className="text-sm mt-1">Please check that your backend server is running at https://chat-with-pdf-a7bl.onrender.com</p>
         </div>
       )}
 

@@ -66,7 +66,7 @@ const AiQuestionAnswer: React.FC = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post('http://localhost:3000/upload', formData, {
+      const response = await axios.post('https://chat-with-pdf-a7bl.onrender.com/upload', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
